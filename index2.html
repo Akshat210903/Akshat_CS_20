@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Profile Page</title>
+    <style>
+        * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f0f0f0;
+    padding: 20px;
+}
+
+.profile-container {
+    max-width: 600px;
+    margin: 0 auto;
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+}
+
+.profile-header {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.profile-pic {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-bottom: 10px;
+}
+
+.profile-header h1 {
+    font-size: 24px;
+    margin-bottom: 5px;
+}
+
+.profile-header p {
+    font-size: 16px;
+    color: #666;
+}
+
+.profile-details h2 {
+    font-size: 20px;
+    margin-bottom: 10px;
+    border-bottom: 2px solid #4CAF50;
+    padding-bottom: 5px;
+}
+
+.profile-details p,
+.profile-details ul {
+    margin-bottom: 20px;
+}
+
+.profile-details ul {
+    list-style: none;
+}
+
+.profile-details ul li {
+    font-size: 16px;
+    margin-bottom: 5px;
+}
+
+    </style>
+</head>
+<body>
+    <div class="profile-container">
+        <div class="profile-header">
+            <img src="data:image/jpeg;base64,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" alt="Profile Picture" class="profile-pic">
+            <h1>Akshat Mishra</h1>
+            <p>Web Developer | Programmer</p>
+        </div>
+        <div class="profile-details">
+            <h2>About Me</h2>
+            <p>Hi, I am Akshat Mishra, a passionate web developer with experience in building beautiful and functional websites.</p>
+            
+            <h2>Contact Information</h2>
+            <ul>
+                <li>Email: iamakshat003@gmail.com</li>
+                <li>Phone: +9126567890</li>
+                <li>Location: Lucknow,India</li>
+            </ul>
+            
+            <h2>Skills</h2>
+            <ul>
+                <li>HTML & CSS</li>
+                <li>JavaScript</li>
+                <li>React.js</li>
+                <li>Node.js</li>
+            </ul>
+        </div>
+    </div>
+</body>
+</html>
